@@ -43,7 +43,7 @@ button {
 .header__title {
   font-weight: 900;
   font-size: 30px;
-
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -101,7 +101,19 @@ button {
   flex-direction: column;
   overflow-y: auto;
   max-height: 100%;
+  scrollbar-color: rgba(140, 140, 140, 0.1);
+  scrollbar-width: thin;
 }
+
+.selection__list::-webkit-scrollbar {
+  width: 6px;
+}
+.selection__list::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.1);
+  opacity: 0.1;
+  border-radius: 8px;
+}
+
 .selection__item {
   display: flex;
   align-items: center;
@@ -129,6 +141,7 @@ button {
 }
 
 .selection__result {
+  width: min-content;
   font-size: 12px;
 
   text-align: center;
